@@ -2,6 +2,14 @@ document.getElementById('searchBtn').addEventListener('click', () => {
     const city = document.getElementById('city').value;
     const apiKey = 'YOUR_API_KEY'; // Replace with your OpenWeatherMap API key
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    const API_KEY = 'your_api_key_here';
+const city = 'London';
+
+fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`)
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
+
 
     fetch(url)
         .then(response => response.json())

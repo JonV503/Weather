@@ -6,12 +6,6 @@ document.getElementById('searchBtn').addEventListener('click', () => {
 const city = 'London';
 
 fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`)
-  .then(response => response.json())
-  .then(data => console.log(data))
-  .catch(error => console.error('Error:', error));
-
-
-    fetch(url)
         .then(response => response.json())
         .then(data => {
             if (data.cod === 200) {
